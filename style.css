@@ -31,19 +31,18 @@ footer {
 
 .content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
-    width: 60%;
-    margin: 40px auto;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
     
 }
 
 .ctlPanel {
     flex: 1;
-    /* width: 200px; */
-    background-color: #EB5353;
+    align-self: flex-end;
     color: #ffffff;
-    height: 500px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -51,14 +50,10 @@ footer {
 
 .sketchPanel {
     box-sizing: border-box;
-    flex: 3;
-    width: 200px;
+    width: 700px;
     height: 700px;
     display: flex;
     flex-direction: column;
-    /* padding: 20px;
-    border-radius: 15px; */
-    /* border: 5px solid white; */
     box-shadow: 2px 4px 16px #000000;
 }
 
@@ -70,8 +65,10 @@ footer {
 button {
     font-size: 20px;
     border: none;
-    padding: 20px;
+    padding: 15px;
     border-radius: 15px;
+    background-color: #EB5353;
+    color: white;
 }
 
 .rowGrid {
