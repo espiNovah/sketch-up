@@ -35,7 +35,10 @@ function  draw(e) {
 
 function remakeGrid (){
     let newValue = prompt('Enter Number of Grid');
-    if (newValue > 100 || newValue < 1) {
+    if ((newValue%1) != 0){
+        alert('You can only enter numbers')
+    }
+    else if (newValue > 100 || newValue < 1) {
         alert('SketchUp can only have 1 to 100 grids')
     }
     else {
