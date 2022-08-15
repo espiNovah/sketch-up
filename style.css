@@ -21,6 +21,7 @@ header {
 
 footer {
     padding: 20px;
+    margin-top: 20px;
     text-align: center;
     background-color: #FAEEE7;
 }
@@ -43,7 +44,7 @@ footer {
     flex: 1;
     align-self: flex-end;
     color: #ffffff;
-    padding: 20px;
+    padding: 20px 0px;
     border-radius: 10px;
     text-align: center;
 }
@@ -63,11 +64,18 @@ footer {
 }
 
 button {
-    font-size: 20px;
+    font-size: 15px;
     border: none;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #EB5353;
+    color: white;
+
+}
+button:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+    background-color: #000000;
     color: white;
 }
 
