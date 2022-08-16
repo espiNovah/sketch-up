@@ -90,10 +90,15 @@ button {
 
 }
 button:hover {
-    filter: brightness(1.2);
     cursor: pointer;
     background-color: #000000;
     color: white;
+}
+
+button:active {
+    filter: brightness(0.9);
+    background-color: #808080;
+    color: #ffffff;
 }
 
 .rowGrid {
