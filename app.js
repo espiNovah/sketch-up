@@ -27,17 +27,21 @@ function createColumns(colNum) {
         for (let j = 0; j < colNum; j++) {
             let colDiv = document.createElement('div');
             colDiv.className = 'boxGrid';
-            rowDiv.appendChild(colDiv)
+            rowDiv.appendChild(colDiv);
         }
-        sketchBox.appendChild(rowDiv)
+        sketchBox.appendChild(rowDiv);
     }
 }
 
 function draw(e) {
-    if (rbwCheck.checked == true) {
-        this.style.backgroundColor = addRainbowColor();
+    if (rbwCheck.checked) {
+        let rgb = addRainbowColor();
+        this.style.backgroundColor = rgb;
+        this.style.borderColor = rgb;
     } else {
-        this.style.backgroundColor = '#000000'
+        let color = '#000000';
+        this.style.backgroundColor = color;
+        this.style.borderColor = color;
     }
     isColored = true;
 }
@@ -47,14 +51,14 @@ function addRainbowColor() {
     const r = randomRGB(0, 255);
     const g = randomRGB(0, 255);
     const b = randomRGB(0, 255);
-    const rgb = `rgb(${r},${g},${b})`;
-    return rgb;
+    const rgbColor = `rgb(${r},${g},${b})`;
+    return rgbColor;
 }
 
 function clearGrid() {
     if (isColored) {
         const grid = document.getElementsByClassName("boxGrid");
-        gridDiv = Array.from(grid).forEach(div => div.style.backgroundColor = null);
+        gridDiv = Array.from(grid).forEach(div => div.style = null);
         isColored = false;
     }
 }
@@ -62,13 +66,13 @@ function clearGrid() {
 function remakeGrid() {
     let newValue = prompt('Enter Number of Grid');
     if ((newValue % 1) != 0) {
-        alert('You can only enter numbers')
+        alert('You can only enter numbers');
     }
     else if (newValue > 100 || newValue < 1) {
-        alert('SketchUp can only have 1 to 100 grids')
+        alert('SketchUp can only have 1 to 100 grids');
     }
     else {
-        clearGrid();
+        let tweakRow = Array.from(rows).forEach(row => sketchBox.removeChild(row));
         makeGrid(newValue);
     }
 }
