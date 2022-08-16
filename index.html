@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketch Up</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
         <div class="header">
@@ -16,6 +19,13 @@
     <div class="container">
         <div class="content">
             <div class="ctlPanel">
+                <div class="rbwColor">
+                    <strong>Rainbow Color:</strong>
+                    <label class="switch">
+                        <input id="rbwSwitch" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
                 <button class="changeGrid">Change Grid Size</button>
                 <button class="clearGrid">Clear</button>
             </div>
@@ -24,9 +34,19 @@
         </div>
     </div>
     <footer>
-        Copyright © SketchUp by <a href="https://github.com/espinovah" style="color: #EB5353;">Samuel Philip</a>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            SketchUp
+            <a href="https://github.com/espiNovah/sketch-up" target="_blank">
+                <i class="fa fa-github"></i>
+            </a> | <a href="https://github.com/espinovah">Samuel Philip</a> 
+        </p>
 
     </footer>
     <script src="app.js"></script>
 </body>
+
 </html>
