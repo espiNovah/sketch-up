@@ -17,4 +17,7 @@ Some stuff I did and learned
 
 Live demo >> https://espinovah.github.io/sketch-up/
 
+![sketch-up](https://user-images.githubusercontent.com/81432480/185596388-017371f5-1893-4a75-98d2-1bf41bff4dcb.gif)
+
+
 Kindly check it out.
